@@ -1,0 +1,38 @@
+
+
+.form{
+  display: flex;
+  flex-direction: column;
+  max-width: 240px;
+}
+
+.formWrapper {
+margin-bottom: 16px;
+width: 100%;
+* {
+  width: 100%;
+}
+}
+
+.labelName {
+  margin: 0;
+  font-size: 14px;
+}
+
+.input {
+  border-radius: 4px;
+  padding: 8px;
+  min-height: 60px;
+}
+
+.errorBlockPrimary {
+  background-color: rgba(241,109,106,.2);
+  color: #df3a4d;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 8px 12px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+}

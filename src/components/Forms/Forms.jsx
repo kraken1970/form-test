@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
-// import Input from '../Input/Input'
+
+import sts from './Forms.module.scss'
 
 const Forms = () => {
   const [name, setName] = useState('')
@@ -63,44 +64,38 @@ const Forms = () => {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>
-            <p>Name:</p>
-            <input
-              type='text'
-              name='name'
-              value={name}
-              onChange={changeName}
-              placeholder='Введите имя'
-              onBlur={blurHandler}
-            />
-          </label>
+      <form onSubmit={handleSubmit} className={sts.form}>
+        <div className={sts.formWrapper}>
+          <p className={sts.labelName}>Name:</p>
+          <input
+            type='text'
+            name='name'
+            value={name}
+            onChange={changeName}
+            placeholder='Введите имя'
+            onBlur={blurHandler}
+            className={sts.input}
+          />
 
           {nameDirty && nameError && (
-            <div>
-              <p>{nameError}</p>
-            </div>
+            <div className={sts.errorBlock}>{nameError}</div>
           )}
         </div>
 
-        <div>
-          <label>
-            <p>Email:</p>
-            <input
-              type='text'
-              name='email'
-              value={email}
-              onChange={changeEmail}
-              placeholder='Введите email'
-              onBlur={blurHandler}
-            />
-          </label>
+        <div className={sts.formWrapper}>
+          <p className={sts.labelName}>Email:</p>
+          <input
+            type='text'
+            name='email'
+            value={email}
+            onChange={changeEmail}
+            placeholder='Введите email'
+            onBlur={blurHandler}
+            className={sts.input}
+          />
 
           {emailDirty && emailError && (
-            <div>
-              <p>{emailError}</p>
-            </div>
+            <div className={sts.errorBlockPrimary}>{emailError}</div>
           )}
         </div>
 

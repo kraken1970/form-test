@@ -1,4 +1,4 @@
-// import './App.scss'
+import './App.scss'
 
 import Forms from './components/Forms/Forms'
 
