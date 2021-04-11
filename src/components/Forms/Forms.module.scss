@@ -36,3 +36,30 @@ width: 100%;
   align-items: center;
   border-radius: 4px;
 }
+
+.errorBlockSecondary {
+  background: rgba(0,153,255,.2);
+    color: #07e;
+}
+
+.buttonPrimary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 8px;
+  width: 100%;
+  background-color: #07e;
+  border-radius: 4px;
+  color: #ffffff;
+}
+
+.buttonDisabled {
+  background-color: #cecece;
+  color: #615e5e;
+  cursor: not-allowed;
+}

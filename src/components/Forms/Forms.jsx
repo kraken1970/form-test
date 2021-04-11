@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-
+import classNames from 'classnames'
 import sts from './Forms.module.scss'
 
 const Forms = () => {
@@ -78,7 +78,13 @@ const Forms = () => {
           />
 
           {nameDirty && nameError && (
-            <div className={sts.errorBlock}>{nameError}</div>
+            <div
+              className={classNames(sts.errorBlockPrimary, {
+                [sts.errorBlockSecondary]: nameError !== 'Заполните поле',
+              })}
+            >
+              {nameError}
+            </div>
           )}
         </div>
 
@@ -95,11 +101,23 @@ const Forms = () => {
           />
 
           {emailDirty && emailError && (
-            <div className={sts.errorBlockPrimary}>{emailError}</div>
+            <div
+              className={classNames(sts.errorBlockPrimary, {
+                [sts.errorBlockSecondary]: emailError !== 'Заполните поле',
+              })}
+            >
+              {emailError}
+            </div>
           )}
         </div>
 
-        <button disabled={!formValid} type='submit'>
+        <button
+          disabled={!formValid}
+          type='submit'
+          className={classNames(sts.buttonPrimary, {
+            [sts.buttonDisabled]: !formValid,
+          })}
+        >
           Регистрация
         </button>
       </form>
