@@ -59,7 +59,6 @@ const Forms = () => {
     setName('')
     setEmail('')
     setFormValid(false)
-    console.log(e)
   }
 
   return (
@@ -73,7 +72,7 @@ const Forms = () => {
             value={name}
             onChange={changeName}
             placeholder='Введите имя'
-            onBlur={blurHandler}
+            onBlur={(e) => blurHandler(e)}
             className={sts.input}
           />
 
@@ -96,7 +95,7 @@ const Forms = () => {
             value={email}
             onChange={changeEmail}
             placeholder='Введите email'
-            onBlur={blurHandler}
+            onBlur={(e) => blurHandler(e)}
             className={sts.input}
           />
 
